@@ -9,7 +9,7 @@ import (
 )
 
 var Repo *Repository
-
+var stringData = map[string]string{}
 type Repository struct {
 	App *config.AppConfig
 }
@@ -25,8 +25,10 @@ func NewHandler(r *Repository) {
 
 func (m *Repository) Home(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("Home Running!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-	// remoteIP := r.RemoteAddr
-
+	remoteIP := r.RemoteAddr
+	// fmt.Println(remoteIP)
+	stringData["remote_ip"] = remoteIP
+	
 	// m.App.Session.Put(r.Context(), "remote_ip", remoteIP)
 
 	// fmt.Println(remoteIP)
@@ -36,7 +38,7 @@ func (m *Repository) Home(w http.ResponseWriter, r *http.Request) {
 func (m *Repository) About(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("About Running!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
 
-	stringData := map[string]string{}
+	
 	stringData["Test"] = "HELLO WOrLD"
 	// remoteIP := m.App.Session.GetString(r.Context(),"remote_ip")
 	// stringData["remote_ip"] = remoteIP

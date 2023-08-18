@@ -3,7 +3,6 @@ package renders
 import (
 	// "bytes"
 	"bytes"
-	"fmt"
 	"gocourse/pkg/config"
 	"gocourse/pkg/models"
 	"log"
