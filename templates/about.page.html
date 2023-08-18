@@ -1,0 +1,20 @@
+{{template "base" .}}
+
+{{define "content"}}
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>This is About pag jdhfdfuhgrehuyjgdjdbjggdye</h1>
+                <p>This is from handler : {{index .StringData "Test"}}</p>
+        
+                <!-- <p>
+                    {{if ne (index .StringData "remote_ip") ""}}
+                        This is the IP Address of Client: {{index .StringData "remote_ip"}}
+                    {{else}}
+                        Go back home page to get IP : <a href="/"> Home Page</a>
+                    {{end}} -->
+                </p>
+            </div>
+        </div>
+    </div>
+{{end}}
