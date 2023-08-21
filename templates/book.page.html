@@ -1,0 +1,46 @@
+{{template "base" .}}
+
+{{define "content"}}
+    
+
+    <div class="container">
+        <div class="row ">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <h1 class="text-center mt-4">Search For Availability</h1>
+                
+                <form action="/book" method="get" novalidate class="needs-validation">
+                    <div class="form-row">
+                            <div class="col">
+                                    <div class="form-row" >
+                                        <div class="col">
+                                            <p><strong>Arrival</strong></p>
+                                            <input required class="form-control" type="date" name="start" placeholder="Arrival">
+
+                                        </div>
+                                        <div class="col">
+                                            <p><strong>Departure</strong></p>
+                                            <input required class="form-control" type="date" name="end" placeholder="Departure">
+
+                                        </div>
+                                        
+                                    </div>
+                            </div>
+                    </div>
+                    <hr>
+                    <button type="submit" class="btn btn-primary">Search Availability</button>
+                </form>
+
+
+            </div>
+        </div>
+        <!-- <div class="container">
+            <p> This is .....</p>
+            <button id="colorButton" class="btn btn-outline-secondary"> Button</button>
+        </div> -->
+    </div>
+    
+   
+
+    
+{{end}}

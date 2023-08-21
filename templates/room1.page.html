@@ -1,0 +1,81 @@
+{{template "base" .}}
+
+{{define "content"}}
+    
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1 class="text-center mt-4">Welcome to the Room1 of Bookings Application</h1>
+                
+                <!-- <a href="/about">About page </a> -->
+                <!-- <img src="/static/images/coffe2.jpg" height="100%" width="100%"> -->
+                
+
+
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            </div class="col">
+            <p> 
+                
+                Discover comfort in our 3-star hotel room, featuring a plush queen-sized bed, complimentary Wi-Fi, a writing desk, flat-screen TV, and a well-equipped private bathroom. Whether you're here for business or leisure, our room offers a relaxing sanctuary with modern amenities, ensuring a restful stay within our affordable yet quality-focused establishment.
+                            </p>
+                <img src="/static/images/hotel.jpg" class="img-fluid img-thumbanail mx-auto d-block room-style" alt="room image">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row mt-5">
+            </div class="col">
+                <img src="/static/images/hotel3.jpg" class="img-fluid img-thumbanail mx-auto d-block room-style" alt="room image">
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col text-center mt-4">
+            
+            <a id = "checkrButton" href="#!" class="btn btn-success"> Check Availability</a>
+        </div>
+    </div>
+
+    
+{{end}}
+
+
+{{define "js"}}
+<script>
+    document.getElementById("checkrButton").addEventListener("click",function(){
+              // alert("Hello","success");
+              modalalert("title","<em>Hello</em>","error","hhhhh");
+              // attention.success();
+  
+              let html = `
+              <form id = "check-availability-form" action = "" method = "post" novalidate class= "needs-validation">
+                      <div class="form-row">
+                              <div class="col">
+                                      <div class="form-row" id = "reservation-dates-modal" >
+                                          <div class="col">
+                                              <p><strong>Arrival</strong></p>
+                                              <input required class="form-control" type="date" name="start" id="start" placeholder="Arrival">
+  
+                                          </div>
+                                          <div class="col">
+                                              <p><strong>Departure</strong></p>
+                                              <input required class="form-control" type="date" name="end" id = "end"  placeholder="Departure">
+  
+                                          </div>
+                                          
+                                      </div>
+                              </div>
+                      </div>
+              </form>
+              `
+    attention.custom({msg: html, title: "Choose your Dates"});
+            })
+</script>
+{{end}}

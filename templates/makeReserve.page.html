@@ -1,0 +1,49 @@
+{{template "base" .}}
+
+{{define "content"}}
+    
+
+    <div class="container">
+        <div class="row ">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <h1 class="text-center mt-4">Make a Reservation</h1>
+                
+                <form action="/makeReserve" method="post" novalidate class="needs-validation">
+                    <div class="form-row">
+                            <div class="col">
+                                    <div class="form-row" >
+                                        <label for="validationCustom01"><strong>First Name:</strong></label>
+                                        <input type="text" class="form-control" id="validationCustom01" placeholder="First name"  required>
+                                    </div>
+                                    <div class="form-row" >
+                                        <label for="validationCustom01"><strong>Last name: </strong></label>
+                                        <input type="text" class="form-control" id="validationCustom01" placeholder="Last name" required>
+                                    </div>
+                                    <div class="form-row">
+                                        <label for="inputEmail4"><strong> Email:</strong></label>
+                                        <input required type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                                    </div>
+                                    <div class="form-row">
+                                        <label for="typePhone"><strong>Phone:</strong></label>
+                                        <input required type="tel" class="form-control" id="typePhone" placeholder="Phone">
+                                    </div>
+                            </div>
+                    </div>
+                    <hr>
+                    <button type="submit" class="btn btn-primary">Make Reservation</button>
+                </form>
+
+
+            </div>
+        </div>
+        <!-- <div class="container">
+            <p> This is .....</p>
+            <button id="colorButton" class="btn btn-outline-secondary"> Button</button>
+        </div> -->
+    </div>
+    
+   
+
+    
+{{end}}
